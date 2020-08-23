@@ -25,7 +25,8 @@ RUN apt-get update && \
 RUN apt-get install -qy curl 
 
 RUN apt-get install -qy curl && \
-    curl -sSL https://get.docker.com/ | sh
+    curl -sSL https://get.docker.com/ | sh && \
+    usermod -aG docker jenkins
 
 
 # Standard SSH port
